@@ -70,7 +70,30 @@ local default_plugins = {
   {
     "nvim-tree/nvim-web-devicons",
     opts = function()
-      return { override = require "nvchad.icons.devicons" }
+      local override = require "nvchad.icons.devicons"
+      override["go"] = {
+        icon = "󰟓",
+        color = "#6880a3",
+        name = "go",
+      }
+      override["templ"] = {
+        icon = "󰌝",
+        color = "#c06e88",
+        name = "templ",
+      }
+      local override_by_filename = {
+        ["go.mod"] = {
+          icon = "󰟓",
+          color = "#c06e88",
+          name = "gomod",
+        },
+        ["go.sum"] = {
+          icon = "󰟓",
+          color = "#c06e88",
+          name = "gosum",
+        },
+      }
+      return { override = override, override_by_filename = override_by_filename }
     end,
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "devicons")
