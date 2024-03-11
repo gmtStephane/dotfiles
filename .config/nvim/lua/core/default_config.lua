@@ -10,13 +10,14 @@ M.ui = {
   hl_add = {},
   hl_override = {},
   changed_themes = {
-    gruvbox = {
+    gruvchad = {
       base_30 = {
-        statusline_bg = "#282828"
+        statusline_bg = "#1e2122",
+        black2 = "#1e2122"
       }
     }
   },
-  theme_toggle = { "onedark", "one_light" },
+  -- theme_toggle = { "onedark", "one_light" },
   theme = "onedark",          -- default theme
   transparency = false,
   lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
@@ -53,7 +54,10 @@ M.ui = {
     show_numbers = false,
     enabled = true,
     lazyload = true,
-    overriden_modules = nil,
+    overriden_modules = function(modules)
+      table.remove(modules, 4)
+    end
+    ,
   },
 
   -- nvdash (dashboard)
