@@ -1,0 +1,3 @@
+function rff() {
+	cd $(rf)
+}
