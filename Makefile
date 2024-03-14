@@ -1,5 +1,5 @@
 install:
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
 	stow -t ~/.config .config
 	stow -t ~/ zsh
 	stow -t ~/ tmux
