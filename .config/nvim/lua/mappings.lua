@@ -18,7 +18,9 @@ map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
 
 -- local nomap = vim.keymap.del
 -- nomap("n", "gi")
-map("n", "<leader>i", ":Telescope lsp_implementations<CR>", { desc = "Telescope lsp_implementations" })
-map("n", "<leader>d", ":Telescope lsp_definitions<CR>", { desc = "Telescope lsp_definitions" })
-map("n", "<leader>fd", ":Telescope lsp_document_symbols<CR>", { desc = "Telescope document symbols" })
-map("n", "<leader>fl", ":Telescope lsp_dynamic_workspace_symbols<CR>", { desc = "Telescope find worspace symbol" })
+map("n", "<leader>fi", ":Telescope lsp_implementations<CR>", { desc = "Telescope lsp_implementations" })
+map("n", "<leader>fd", ":Telescope lsp_definitions<CR>", { desc = "Telescope lsp_definitions" })
+map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", { desc = "Telescope document symbols" })
+map("n", "<leader>fr", ":Telescope lsp_references<CR>", { desc = "Telescope lsp_references" })
+
+map("n", "<leader>gg", ":LazyGit <CR>", { desc = "LazyGit" })
