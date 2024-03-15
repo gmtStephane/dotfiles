@@ -10,6 +10,12 @@ map("n", "<leader>tf", ":GoTestFunc -v -F <CR>", { desc = "GoTestFunc" })
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
+map("c", "Q", "q", { desc = "CMD enter command mode" })
+map("c", "Qa", "qa", { desc = "CMD enter command mode" })
+map("c", "qA", "qa", { desc = "CMD enter command mode" })
+map("c", "X", "x", { desc = "CMD enter command mode" })
+map("c", "W", "w", { desc = "CMD enter command mode" })
+
 map("n", "<leader>fm", function()
 	require("conform").format()
 end, { desc = "File Format with conform" })
@@ -24,3 +30,20 @@ map("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", { desc = "Telescop
 map("n", "<leader>fr", ":Telescope lsp_references<CR>", { desc = "Telescope lsp_references" })
 
 map("n", "<leader>gg", ":LazyGit <CR>", { desc = "LazyGit" })
+
+map("n", "<C-d>", "<C-d>zz", { remap = true, desc = "Center cursor after moving down half-page" })
+map("n", "<C-u>", "<C-u>zz", { remap = true, desc = "Center cursor after moving up half-page" })
+
+map(
+	"n",
+	"]]",
+	":TSTextobjectGotoNextStart @function.outer | lua vim.cmd('norm zz') <CR>",
+	{ remap = true, desc = "Go to next function and center the cursor" }
+)
+
+map(
+	"n",
+	"[[",
+	":TSTextobjectGotoPreviousStart @function.outer | lua vim.cmd('norm zz') <CR>",
+	{ remap = true, desc = "Go to previous function and center the cursor" }
+)

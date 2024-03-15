@@ -1,5 +1,17 @@
 return {
 	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = { -- optional packages
+			"nvim-treesitter/nvim-treesitter",
+		},
+		ft = {
+			"go",
+		},
+		config = function()
+			require("configs.treesitter-textobjects")
+		end,
+	},
+	{
 		"kdheepak/lazygit.nvim",
 		cmd = {
 			"LazyGit",
@@ -8,24 +20,11 @@ return {
 			"LazyGitFilter",
 			"LazyGitFilterCurrentFile",
 		},
-		-- optional for floating window border decoration
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
 	},
-	{
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		dependencies = { -- optional packages
-			"nvim-treesitter/nvim-treesitter",
-		},
-		ft = {
-			"go",
-		},
-		-- lazy = false,
-		config = function()
-			require("configs.treesitter-textobjects")
-		end,
-	},
+
 	{
 		"stevearc/conform.nvim",
 		config = function()
@@ -50,10 +49,10 @@ return {
 		dependencies = { -- optional packages
 			"ray-x/guihua.lua",
 			"neovim/nvim-lspconfig",
-			"nvim-treesitter/nvim-treesitter",
 		},
 		config = function()
 			require("go").setup({
+				textobjects = false,
 				gocoverage_sign = "║",
 			})
 		end,
