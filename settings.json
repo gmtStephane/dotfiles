@@ -1,0 +1,80 @@
+{
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "scm.inputFontFamily": "JetBrainsMono Nerd Font",
+    "chat.editor.fontFamily": "JetBrainsMono Nerd Font",
+    "debug.console.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.codeLensFontFamily": "JetBrainsMono Nerd Font",
+    "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
+    "markdown.preview.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.inlayHints.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.experimentalInlineEdit.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.indentSize": "tabSize",
+    "editor.tabSize": 2,
+    "editor.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "editor.formatOnSave": true,
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.scrollbar.verticalScrollbarSize": 2,
+    "editor.scrollbar.horizontalScrollbarSize": 2,
+    "editor.renderLineHighlight": "none",
+    "editor.lineNumbers": "relative",
+    "workbench.layoutControl.type": "menu",
+    "git.openRepositoryInParentFolders": "never",
+    "window.titleBarStyle": "custom",
+    "svelte.enable-ts-plugin": true,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    "go.useLanguageServer": true,
+    "gopls": {
+        "formatting.gofumpt": true,
+    },
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.enablePreview": false,
+    "workbench.list.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "editor.guides.bracketPairsHorizontal": false,
+    "editor.guides.highlightActiveIndentation": false,
+    "workbench.startupEditor": "none",
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<space>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.focus",
+            ],
+        },
+        {
+            "before": [
+                "<space>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences",
+            ],
+        },
+        {
+            "before": [
+                "<space>",
+                "i"
+            ],
+            "commands": [
+                "editor.action.goToImplementation",
+            ],
+        }
+    ],
+    "workbench.activityBar.location": "hidden",
+    "workbench.iconTheme": "material-icon-theme"
+}
